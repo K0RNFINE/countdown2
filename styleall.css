@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.taskbar{
+    width: 100%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 120px;
+    cursor: default;
+    border-radius: 50%;
+    z-index: 0;
+    position: relative;
+    left: 48px;
+}
+.taskbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+.taskbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.taskbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.taskbar ul li:hover::after{
+    width: 100%;
+}
+
+
+
+.underline-1{
+    color: #fff;
+    width: 100%;
+    position: relative;
+    bottom: 10px;
+}
+.underline-2{
+    color: #fff;
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+}
+.underline-3{
+    color: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    bottom: -10px;
+}
+.menu-button {
+    width: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    left: 1550px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    background-image: linear-gradient(url(menu-close.png));
+}
+
+
+.content {
+  font-family: "Roboto", sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 120px;
+  line-height: 2;
+  color: #333;
+  transition: all 500ms ease;
+}
+  
+.content.move-down {
+  margin-top: 187px;
+}
+  
+  .sliding-menu-container {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: -57px;
+    font-family: "Roboto", sans-serif;
+    transition: all 500ms ease;
+  }
+  
+  .sliding-menu-container.active {
+    top: 0;
+  }
+  
+  .sliding-menu-container .main-menu-item svg {
+    height:20px;
+    animation: bounceAnim 600ms alternate infinite;
+  }
+  
+  @keyframes bounceAnim {
+    to {
+      transform: translateY(-4px);
+    }
+  }
+  
+  .sliding-menu-container .sliding-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .sliding-menu-container .sliding-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .sliding-menu-container .sliding-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: all 300ms ease;
+    z-index: 0;
+  }
+  
+  .sliding-menu-container .sliding-menu a:hover::after {
+    width: 100%;
+  }
+  
+  .sliding-menu-container .sliding-menu {
+    background: linear-gradient(to top, #003cff, #0044ff, #002fff);
+    padding: 8px 32px;
+    max-width: 1000px;
+    border-radius: 0 0 32px 32px;
+    margin:  0 auto;
+  }
+  
+  .sliding-menu-container .main-menu-item {
+    background: #f8e800;
+    padding: 2px 48px 16px 48px;
+    max-width: 100px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto;
+    border-radius: 0 0 60% 60%;
+    cursor: pointer;
+  }
